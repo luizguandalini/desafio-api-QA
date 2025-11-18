@@ -54,3 +54,49 @@ Para visualizar o relatório HTML:
 ```bash
 npm run test:report
 ```
+
+## 📋 Cenários de Teste
+
+### Login
+- [CRÍTICO] Deve realizar login com credenciais válidas de usuário administrador
+- [CRÍTICO] Deve realizar login com credenciais válidas de usuário comum
+- Deve retornar erro ao fazer login com email inválido
+- Deve retornar erro ao fazer login com senha incorreta
+- Deve retornar erro ao fazer login sem informar email
+- Deve retornar erro ao fazer login sem informar senha
+
+### Usuários
+- [CRÍTICO] Deve cadastrar novo usuário com dados válidos
+- [CRÍTICO] Deve listar todos os usuários cadastrados
+- Deve retornar erro ao cadastrar usuário com email já existente
+- Deve retornar erro ao cadastrar usuário sem informar nome
+- Deve retornar erro ao cadastrar usuário sem informar email
+- Deve retornar erro ao cadastrar usuário com email em formato inválido
+- Deve buscar usuário por ID válido
+- Deve retornar erro ao buscar usuário com ID inexistente
+- Deve deletar usuário com sucesso
+
+### Produtos
+- [CRÍTICO] Deve cadastrar novo produto com token de administrador
+- [CRÍTICO] Deve listar todos os produtos cadastrados
+- Deve retornar erro ao cadastrar produto sem autenticação
+- Deve retornar erro ao cadastrar produto com token de usuário comum (não admin)
+- Deve retornar erro ao cadastrar produto com nome já existente
+- Deve retornar erro ao cadastrar produto sem informar nome
+- Deve retornar erro ao cadastrar produto sem informar preço
+- Deve buscar produto por ID válido
+- Deve retornar erro ao buscar produto com ID inexistente
+- Deve deletar produto com sucesso
+- Deve retornar erro ao deletar produto sem autenticação
+
+### Carrinhos
+- [CRÍTICO] Deve criar carrinho com produtos válidos
+- [CRÍTICO] Deve listar todos os carrinhos cadastrados
+- Deve retornar erro ao criar carrinho sem autenticação
+- Deve retornar erro ao criar carrinho com produto inexistente
+- Deve retornar erro ao criar carrinho quando usuário já possui carrinho ativo
+- Deve validar cálculo de preço total do carrinho
+- Deve concluir compra (DELETE) de um carrinho com sucesso
+- Deve cancelar compra de um carrinho com sucesso
+- Deve retornar erro ao concluir compra sem autenticação
+- Deve retornar erro ao cancelar compra sem autenticação
