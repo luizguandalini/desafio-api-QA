@@ -1,0 +1,26 @@
+# Dependências
+node_modules/
+yarn.lock
+
+# Resultados de testes
+test-results/
+playwright-report/
+*.log
+
+# Arquivos de configuração do IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos temporários
+*.tmp
+*.temp
+
+# Traces do Playwright
+trace.zip
